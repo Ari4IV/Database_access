@@ -19,3 +19,9 @@
 3. 進行資料遷移
    ```shell
    php migration.php
+
+## 專案展示
+![首頁](images/index.png)
+![新增學生](images/add.png)
+![success](images/success.png)
+![學生列表](images/list.png)
