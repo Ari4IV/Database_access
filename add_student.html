@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增學生</title>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-md mx-auto bg-white rounded p-6 shadow-md">
+        <h3 class="text-2xl font-semibold mb-4 text-center">新增學生</h3>
+        <form action="add_student_handler.php" method="post">
+            <div class="mb-4">
+                <label class="block text-gray-600 font-semibold">姓名</label>
+                <input style="height: 40px;" type="text" name="std_name" class="form-input border border-gray-700 rounded-full mt-1 mb-2 block w-full text-center" required />
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-600 font-semibold">電話</label>
+                <input style="height: 40px;" type="tel" name="phone" pattern="09[0-9]{8}" maxlength="10" class="form-input border border-gray-700 rounded-full mt-1 mb-2 block w-full text-center" required />
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-600 font-semibold">班級</label>
+                <select style="height: 40px;" name="class_name" class="form-select border border-gray-700 rounded-full mt-1 mb-2 block w-full text-center" required >
+                    <option value="">請選擇班級</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+            </div>
+            <div class="flex justify-between">
+                <a href="/" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">取消</a>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                    送出
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
