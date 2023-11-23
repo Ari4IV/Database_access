@@ -9,10 +9,7 @@
     <div class="max-w-4xl mx-auto bg-white p-8 shadow-md rounded-lg">
         <h1 class="text-2xl font-semibold mb-4 text-center">學生列表</h1>
         <?php
-        $host = 'localhost'; // Database所在主機
-        $dbName = 'db_course'; // 資料庫名稱
-        $user = ''; // 連線帳號
-        $pass = ''; // 連線密碼
+        require_once('config.php'); // 載入資料庫連線設定檔
         $dsn = "mysql:host=" . $host . ";dbname=" . $dbName;
         try {
             $pdo = new PDO($dsn, $user, $pass);

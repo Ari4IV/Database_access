@@ -7,10 +7,8 @@ $className = $_POST['class_name'];
 //作業:在此宣告$query變數的內容（SQL指令)
 $query = "INSERT INTO `student` (`student_id`, `name`, `phone`, `class_name`) VALUES (NULL, '$stdName', '$phone', '$className')";
 
-$host = 'localhost'; //Database所在主櫟
-$dbName = 'db_course'; //資料庫名稱
-$user = ''; //連線帳號
-$pass = ''; //連線密碼
+require_once('config.php'); // 載入資料庫連線設定檔
+
 $dsn = "mysql:host=" . $host . ";dbname=" . $dbName;
 
 try {
